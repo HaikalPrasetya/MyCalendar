@@ -84,6 +84,7 @@ const calculateDate = (
     new Date()
   );
 
+  /* @ts-ignore */
   const busySlots = nylasData.data[0].timeSlots.map((slot) => ({
     start: fromUnixTime(slot.startTime),
     end: fromUnixTime(slot.endTime),

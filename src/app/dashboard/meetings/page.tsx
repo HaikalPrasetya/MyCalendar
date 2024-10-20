@@ -71,12 +71,15 @@ async function MeetingsPage() {
                   <div>
                     <p className="text-muted-foreground text-sm">
                       {format(
+                        /* @ts-ignore */
                         fromUnixTime(item.when.startTime),
                         "EEEE, dd MMM"
                       )}
                     </p>
                     <p className="text-muted-foreground text-xs pt-1">
-                      {format(fromUnixTime(item.when.startTime), "hh:mm a")} -{" "}
+                      {/* @ts-ignore */}
+                      {format(fromUnixTime(item.when.startTime), "hh:mm a")} -
+                      {/* @ts-ignore */}
                       {format(fromUnixTime(item.when.endTime), "hh:mm a")}
                     </p>
 
@@ -85,6 +88,7 @@ async function MeetingsPage() {
 
                       <a
                         className="text-xs text-primary underline underline-offset-4"
+                        /* @ts-ignore */
                         href={item.conferencing.details.url}
                         target="_blank"
                       >
